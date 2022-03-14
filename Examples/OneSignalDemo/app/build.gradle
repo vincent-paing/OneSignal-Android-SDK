@@ -28,7 +28,7 @@ android {
         huawei {
             dimension "default"
             minSdkVersion 17
-            applicationId "com.onesignal.example"
+            applicationId "com.onesignal.sdktest"
         }
     }
 
