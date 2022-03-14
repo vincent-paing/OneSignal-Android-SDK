@@ -30,15 +30,14 @@ jobs:
           java-version: 1.8
 
       ## Build all our Build Types at once ##
-      - name: Build all artifacts
-        id: buildAllApks
-        uses: eskatos/gradle-command-action@v1.3.3
+      - name: Setup Gradle
+      - uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: current
-          wrapper-cache-enabled: true
-          dependencies-cache-enabled: true
-          configuration-cache-enabled: true
-          arguments: assembleRelease
+          arguments: build
+          build-root-directory: Examples/OneSignalDemo
+
+      - name: Execute Gradle build
+        run: ./gradlew build
 
       - name: Run Kotlin Linter
         run: ./gradlew ktlintStagingDebugCheck
