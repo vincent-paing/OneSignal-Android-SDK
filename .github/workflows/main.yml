@@ -45,8 +45,8 @@ jobs:
           arguments: build
           build-root-directory: Examples/OneSignalDemo
 
-      - name: Run Kotlin Linter
-        run: ./gradlew ktlintStagingDebugCheck
+      # - name: Run Kotlin Linter
+      #   run: ./gradlew ktlintStagingDebugCheck
 
-      - name: Run Unit Tests
-        run: ./gradlew testStagingDebugUnitTest
+      # - name: Run Unit Tests
+      #   run: ./gradlew testStagingDebugUnitTest
