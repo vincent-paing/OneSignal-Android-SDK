@@ -13,6 +13,10 @@ android {
         flavorDimensions "default"
     }
 
+    lintOptions {
+                abortOnError false
+            }
+
     buildTypes {
         release {
             minifyEnabled false
