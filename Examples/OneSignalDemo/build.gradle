@@ -7,6 +7,11 @@ buildscript {
         gradlePluginPortal()
         // Huawei maven
         maven { url 'https://developer.huawei.com/repo/' }
+        android {
+            lintOptions {
+                abortOnError false
+            }
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.4'
@@ -28,11 +33,6 @@ allprojects {
     }
 }
 
-android {
-    lintOptions {
-        abortOnError false
-    }
-}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
